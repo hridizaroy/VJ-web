@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel = "stylesheet" href="style.css">
+
+  <style>
+    .loader {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0; 
+      left: 0;
+    }
+    .navbar {
+        position: sticky;
+        top: 0;
+    }
+  </style>
+    </head>
+
+    <body>
+        <nav class = "navbar">
+            <div class="logo">
+                <a href="home.html">
+                    <img class="logo_with_bord" alt="Vedant Jadia Home"
+                        src="logo with bord.png">
+                    <img class="logo_without_bord" alt="Vedant Jadia Home"
+                        src="logo without bord.png">
+                </a>
+            </div>
+            <ul>
+                <li class="">
+                    <a href="about.html" class="">About</a>
+                </li>
+                <li class="">
+                    <a href="releases.html" class="">Releases</a>
+                </li>
+                <li class="">
+                    <a href="music.html" class="">Music</a>
+                </li>
+                <li class="">
+                    <a href="contact.html" class="">Contact</a>
+                </li>
+            </ul>
+        
+        </nav>
+
+
+        <script>
+            var logo_with_bord = document.querySelector('.logo_with_bord');
+            var logo_without_bord = document.querySelector('.logo_without_bord');
+
+            function navCollapse() {
+                if (window.pageYOffset == 0) {
+                    logo_with_bord.style.display = "inline";
+                    logo_without_bord.style.display = "none";
+                }
+                else {
+                    logo_with_bord.style.display = "none";
+                    logo_without_bord.style.display = "inline";
+                }
+            }
+
+            //Decrease padding of nav bar
+
+            navCollapse();
+            window.addEventListener('scroll', navCollapse);
+        </script>
+    </body>
+</html>
